@@ -8,3 +8,7 @@ export function formatDate(dateString: string) {
     day: "numeric",
   });
 }
+
+export function checkArrayNotEmpty(list: any) {
+  return list && Array.isArray(list) && list.length > 0;
+}

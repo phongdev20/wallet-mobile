@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   illustration: {
-    width: "100%",
+    aspectRatio: 1,
     height: 310,
     resizeMode: "contain",
   },

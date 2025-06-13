@@ -12,7 +12,11 @@ const SafeScreen = ({ children }: IProps) => {
   const insets = useSafeAreaInsets();
   return (
     <View
-      style={{ paddingTop: insets.top, flex: 1, backgroundColor: COLORS.white }}
+      style={{
+        paddingTop: insets.top,
+        flex: 1,
+        backgroundColor: COLORS.background,
+      }}
     >
       <StatusBar style="dark" backgroundColor={COLORS.white} />
       {children}
