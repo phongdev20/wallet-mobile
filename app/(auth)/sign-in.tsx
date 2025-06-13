@@ -13,8 +13,10 @@ export default function Page() {
   const { signIn, setActive, isLoaded } = useSignIn();
   const router = useRouter();
 
-  const [emailAddress, setEmailAddress] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [emailAddress, setEmailAddress] = React.useState(
+    "phongdevinfo@gmail.com"
+  );
+  const [password, setPassword] = React.useState("Submit20@");
   const [error, setError] = useState("");
 
   const onSignInPress = async () => {
@@ -28,7 +30,7 @@ export default function Page() {
         await setActive({ session: signInAttempt.createdSessionId });
         router.replace("/");
       } else {
-        console.error(JSON.stringify(signInAttempt, null, 2));
+        setError("Có lỗi xảy ra");
       }
     } catch (err: any) {
       if (checkArrayNotEmpty(err?.errors)) {

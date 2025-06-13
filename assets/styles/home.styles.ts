@@ -7,8 +7,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   content: {
-    padding: 20,
-    paddingBottom: 0,
+    paddingHorizontal: 20,
   },
   header: {
     flexDirection: "row",
